@@ -53,10 +53,10 @@ public class StudentBean implements InitializingBean, DisposableBean, BeanNameAw
 		return beanfactory;
 	}
 
-	public void setBeanfactory(BeanFactory beanfactory) {
-		this.beanfactory = beanfactory;
-		System.out.println("the interface of BeanFactoryAware");
-	}
+//	public void setBeanfactory(BeanFactory beanfactory) throws BeansException{
+//		this.beanfactory = beanfactory;
+//		System.out.println("the interface of BeanFactoryAware");
+//	}
 
 	public String getBeanName() {
 		return beanName;
@@ -70,23 +70,27 @@ public class StudentBean implements InitializingBean, DisposableBean, BeanNameAw
 	
 	public void setBeanFactory(BeanFactory arg0) throws BeansException {
 		// TODO Auto-generated method stub
+		this.beanfactory = beanfactory;
+		System.out.println("the interface of BeanFactoryAware.");
 		
 	}
 
-	public void setBeanName(String arg0) {
+	public void setBeanName(String name) {
 		// TODO Auto-generated method stub
-		
+		this.beanName = name;
+		System.out.println("BeanNameAware call setBeanName.");
 	}
 
 	public void destroy() throws Exception {
 		// TODO Auto-generated method stub
-		
+		System.out.println("DisposableBean call destroy.");
 	}
 
 	public void afterPropertiesSet() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("afterPropertiesSet call InitializingBean");
+		System.out.println("afterPropertiesSet call InitializingBean.");
 		
 	}
+
 	
 }
