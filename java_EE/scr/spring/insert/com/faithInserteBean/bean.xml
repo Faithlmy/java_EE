@@ -1,0 +1,12 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "textEditor"  class = "com.faithInserteBean.TextEditer">
+      <property name="spellChecker">
+         <bean id="spellChecker" class="com.faithInserteBean.SpellChecker"/>
+       </property>
+	</bean>
+
+</beans>
