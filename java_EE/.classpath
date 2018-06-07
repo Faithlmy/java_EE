@@ -11,6 +11,7 @@
 	<classpathentry kind="src" path="src/spring/insert"/>
 	<classpathentry kind="src" path="src/spring/insert1"/>
 	<classpathentry kind="src" path="src/mybatis/xml"/>
+	<classpathentry kind="src" path="src/mybatis/zxml"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
@@ -24,5 +25,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/usr/java/jdk1.8.0_144/faithjar/mysql-connector-java-5.1.18.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

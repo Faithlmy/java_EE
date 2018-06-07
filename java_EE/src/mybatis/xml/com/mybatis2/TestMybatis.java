@@ -1,4 +1,4 @@
-package com.mybatis1;
+package com.mybatis2;
 
 import java.io.InputStream;
 
@@ -27,7 +27,7 @@ public class TestMybatis {
          */
         String statement = "com.mybatis1.UserMapper.getUser";//映射sql的标识字符串
         //执行查询返回一个唯一user对象的sql
-        User user = session.selectOne(statement, 1);
+        UserDao user = session.selectOne(statement, 1);
         System.out.println(user);
 	}
 
