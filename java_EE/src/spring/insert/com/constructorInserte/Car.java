@@ -1,4 +1,4 @@
-package com.faithConstructorInserte;
+package com.constructorInserte;
 
 public class Car {
 	
