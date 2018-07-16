@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+          http://www.springframework.org/schema/beans/spring-beans-2.0.xsd  
+          http://www.springframework.org/schema/aop   
+          http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+<!-- 调用关系是：0调用1和11，以及3， 1和11调用2，对应的lxml文件的写法 -->
+	<bean id="bean0" class="com.pk.Bean0">
+		<property name="b1">
+			<bean id="bean1" class="com.pk.Bean1">
+				<property name="b2">
+					<bean id="bean2" class="com.pk.Bean2" />
+				</property>
+			</bean>
+		</property>
+
+		<property name="b11">
+			<bean id="bean111" class="com.pk.Bean11">
+				<property name="b2">
+					<bean id="bean22" class="com.pk.Bean2" />
+				</property>
+			</bean>
+		</property>
+		
+		<property name="b3">
+			<bean id = "op"  class = "com.pk.Bean3"></bean>
+		</property>
+
+	</bean>
+
+
+
+	<!-- <bean id = "bean2" class = "com.park.Bean2"> </bean> -->
+</beans>

@@ -1,11 +1,22 @@
 package com.setInserte;
 
 public class Person {
+	public Person() {
+		super();
+	}
+	
+	public Person(int age, String name, Car car) {
+		super();
+		this.age = age;
+		this.name = name;
+		this.car = car;
+	}
+
 
 	private int age;
 	private String name;
 	private Car car;
-	
+
 	public int getAge() {
 		return age;
 	}
@@ -13,7 +24,7 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -30,21 +41,10 @@ public class Person {
 		this.car = car;
 	}
 
+	@Override
+	public String toString() {
+		return "Person [age=" + age + ", name=" + name + ", car=" + car + "]";
+	}
 
 	
-	public Person(int age, String name, Car car) {
-		super();
-		this.age = age;
-		this.name = name;
-		this.car = car;
-	}
-	
-	public Person()
-	{
-		super();
-	}
-	
-	public String toString() {
-		return "name: " + name + "age: " + age + "car: " + car;
-	}
 }

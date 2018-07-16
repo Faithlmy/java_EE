@@ -1,0 +1,35 @@
+<property name = "empname">
+			<list>
+				<value>a</value>
+				<value>b</value>
+				<value>c</value>
+			</list>
+		</property>
+		<!-- 给list注入值 可以有相同的多个对象  -->
+		<property name = "mylist">
+			<list>
+				<ref bean = "emp1"/>
+				<ref bean = "emp2"/>
+			</list>
+		</property>
+		<!-- 给set注入值 不能有相同的对象 -->
+		<property name = "myset">
+		<set>
+			<ref bean = "emp1"/>
+			<ref bean = "emp2"/>
+		</set>
+		</property>
+		<!-- 给map注入值 只要map中的key值不一样就可以装配value -->
+		<property name = "mymap">
+			<map>
+				<entry key = "1" value-of = "emp1"/>
+				<entry key = "2" value-of = "emp2"/> 
+			</map>
+		</property>
+		<!-- 给属性集合配置 -->
+		<property  name = "pp">
+          	<props>
+                <prop key="pp1">hello</prop>
+                <prop key="pp2">world</prop>
+            </props>
+		</property>

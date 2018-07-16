@@ -6,31 +6,6 @@ public class Car {
 	private String name;
 	private String colour;
 	
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getColour() {
-		return colour;
-	}
-
-	public void setColour(String colour) {
-		this.colour = colour;
-	}
-
-
 	public Car(int number, String name, String colour) {
 		super();
 		this.number = number;
@@ -44,6 +19,6 @@ public class Car {
 	}
 	public  String toString()
 	{
-		return "CarName: " + name + "CarNumber: " + number + "CarColour: " + colour; 
+		return "CarName: " + name + ",  CarNumber: " + number + ",  CarColour: " + colour; 
 	}
 }

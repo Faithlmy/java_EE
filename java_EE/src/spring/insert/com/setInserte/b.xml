@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+    
+
+	<bean id="car" class="com.setInserte.Car">
+	<!-- 构造函数注入 -->
+		<constructor-arg value="15"></constructor-arg>
+		<constructor-arg type="java.lang.String"><value>WHITE</value></constructor-arg>
+		<constructor-arg value="DAZHONG"></constructor-arg>
+	</bean>
+	
+	<!-- set注入 -->
+	<bean id = "person" class = "com.setInserte.Person">
+		<property name = "name" value = "vic"></property>
+		<property name = "age" value = "34"></property>
+		<property name = "car" ref = "car"></property>
+	</bean>
+	<!-- set注入 -->
+	<bean id = "life" class = "com.setInserte.Life">
+		<property name = "name" value = "noodles"></property>
+		<property name = "number" value = "89"></property>
+		<property name = "car" ref = "car"></property>
+		<property name = "person" ref = "person"></property>
+	</bean>
+</beans>
