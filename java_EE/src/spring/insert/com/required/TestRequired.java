@@ -10,7 +10,6 @@ public class TestRequired {
 	public void GetRequired() {
 		ApplicationContext ac = new ClassPathXmlApplicationContext("com/required/b.xml");
 		Student s = (Student) ac.getBean("student");
-		s.setAge(90);
 		System.out.println("name: " + s.getName() + ", age: " + s.getAge());
 	}
 }
