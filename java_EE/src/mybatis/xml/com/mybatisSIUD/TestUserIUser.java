@@ -81,7 +81,7 @@ public class TestUserIUser  {
 	    	}
 	    }
 	    
-	    
+
 	    public static void TestDelete() {
 	    	SqlSession session = sqlSessionFactory.openSession();
 	    	try {
