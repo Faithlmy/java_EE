@@ -28,9 +28,9 @@ public class TestUserIUser  {
 
 	    public static void main(String[] args){
 //	    	TestInsertUser();
-//	    	TestSelectUser();
+	    	TestSelectUser(2);
 //	    	TestSelectUserList();
-	    	TestUpdate();
+//	    	TestUpdate();
 //	    	TestDelete();
 	    }
 	    
@@ -45,6 +45,18 @@ public class TestUserIUser  {
 	    		iuser.insertUser(user);
 	    		session.commit();
 		    	System.out.println("ok");
+	    	}catch(Exception e) {
+	    		e.printStackTrace();
+	    	}finally {
+	    		session.close();
+	    	}
+	    }
+	    
+	    public static void TestSelectUser(int id) {
+	    	SqlSession session = sqlSessionFactory.openSession();
+	    	try {
+	    		myIUser iuser = session.getMapper(myIUser.class);
+	    		System.out.println(iuser.getUser(id));
 	    	}catch(Exception e) {
 	    		e.printStackTrace();
 	    	}finally {
